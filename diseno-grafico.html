@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Gráfico - Juan Diego Trillos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f1ed;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 2rem 0;
+      border-bottom: 1px solid #e8e3de;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #2c2c2c;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .logo:hover {
+      color: #d4a574;
+    }
+    .category-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 3rem 0;
+      color: #2c2c2c;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .gallery-item {
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item p {
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Juan Diego</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 class="category-title">Diseño Gráfico</h1>
+    
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="./Multimedia/Infografía Sala Virtual 2D.jpg" alt="Infografía Sala Virtual 2D">
+        <p>Infografía Sala Virtual 2D</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./Multimedia/Noche Cariomática Padre Diego.jpg" alt="Noche Cariomática Padre Diego">
+        <p>Noche Cariomática Padre Diego</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./Multimedia/Principios Fundamentales de la Seguridad Informática.jpg" alt="Principios Fundamentales de la Seguridad Informática">
+        <p>Principios Fundamentales de la Seguridad Informática</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./Multimedia/Continuity Obra.jpg" alt="Continuity Obra">
+        <p>Continuity Obra</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./Multimedia/Future You Obra.jpg" alt="Future You Obra">
+        <p>Future You Obra</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./Multimedia/Thresholds Obra.jpg" alt="Thresholds Obra">
+        <p>Thresholds Obra</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Juan Diego Trillos. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
