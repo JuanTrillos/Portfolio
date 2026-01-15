@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonia Aravena - Diseñadora Gráfica e Ilustradora</title>
+    <title>Juan Diego Trillos - Diseñador Gráfico UI/UX</title>
     <style>
         * {
             margin: 0;
@@ -78,121 +78,113 @@
             line-height: 1.2;
         }
 
-        .hero-content .subtitle {
-            font-size: 1.1rem;
+        .hero-content .tagline {
+            font-size: 1.2rem;
             color: #666;
             margin-bottom: 1.5rem;
-            font-weight: 300;
         }
 
         .hero-content p {
             font-size: 1rem;
             color: #555;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.8;
         }
 
         .cta-button {
             display: inline-block;
             background-color: #d4a574;
-            color: #ffffff;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
+            color: white;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
-            font-size: 0.9rem;
+            text-decoration: none;
             transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
         .cta-button:hover {
-            background-color: #c2945c;
+            background-color: #c49566;
         }
 
         .hero-image {
+            width: 100%;
+            height: 400px;
             background-color: #e8e3de;
             border-radius: 10px;
-            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .portfolio-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c2c2c;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background-color: #e8e3de;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: #d4a574;
         }
 
-        /* Portfolio Section */
-        .portfolio {
-            background-color: #ffffff;
-            padding: 5rem 2rem;
-            margin-top: 2rem;
+        .portfolio-content {
+            padding: 2rem;
         }
 
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: #f5f1ed;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .project-image {
-            background-color: #e8e3de;
-            aspect-ratio: 4/3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #d4a574;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
+        .portfolio-content h3 {
             font-size: 1.3rem;
-            font-weight: 500;
             margin-bottom: 0.5rem;
+            color: #2c2c2c;
         }
 
-        .project-category {
-            font-size: 0.85rem;
-            color: #d4a574;
-            margin-bottom: 0.8rem;
-        }
-
-        .project-description {
-            font-size: 0.95rem;
+        .portfolio-content p {
+            font-size: 0.9rem;
             color: #666;
-            line-height: 1.6;
         }
 
         /* About Section */
-        .about {
+        #about {
+            background-color: #ffffff;
+            padding: 5rem 2rem;
+        }
+
+        .about-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
@@ -200,20 +192,20 @@
         }
 
         .about-image {
+            width: 100%;
+            height: 300px;
             background-color: #e8e3de;
             border-radius: 10px;
-            aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: #d4a574;
+            font-size: 5rem;
         }
 
         .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
         }
 
         .about-content p {
@@ -224,90 +216,78 @@
         }
 
         .skills {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-top: 2rem;
         }
 
-        .skill-tag {
-            background-color: #d4a574;
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .skill-item {
+            background-color: #f5f1ed;
+            padding: 1rem;
+            border-radius: 5px;
+            font-weight: 500;
+            color: #2c2c2c;
         }
 
         /* Contact Section */
-        .contact {
-            background-color: #2c2c2c;
-            color: #ffffff;
+        #contact {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 5rem 2rem;
             text-align: center;
         }
 
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
         }
 
-        .contact h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact p {
+        .contact-subtitle {
             font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #d4a574;
+            color: #666;
+            margin-bottom: 2.5rem;
         }
 
         .contact-links {
             display: flex;
-            justify-content: center;
             gap: 2rem;
-            margin-top: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .contact-links a {
-            color: #d4a574;
             text-decoration: none;
-            font-size: 0.95rem;
+            color: #d4a574;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .contact-links a:hover {
-            color: #ffffff;
+            color: #c49566;
         }
 
         /* Footer */
         footer {
-            background-color: #1a1a1a;
-            color: #999;
+            background-color: #2c2c2c;
+            color: white;
             text-align: center;
             padding: 2rem;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero, .about {
+            .hero {
                 grid-template-columns: 1fr;
-                padding: 3rem 1.5rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            nav {
-                gap: 1rem;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+                font-size: 2rem;
             }
         }
     </style>
@@ -316,7 +296,7 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="logo">Antonia</div>
+            <div class="logo">Juan Diego</div>
             <nav>
                 <a href="#portfolio">Trabajo</a>
                 <a href="#about">Sobre mí</a>
@@ -328,81 +308,77 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Diseñadora Gráfica e Ilustradora</h1>
-            <p class="subtitle">Creando experiencias visuales únicas</p>
-            <p>Bienvenido a mi portafolio. Me esfuerzo por superar los límites creativos y buscar nuevas formas de impactar visualmente.</p>
+            <h1>Diseñador Gráfico<br>UI/UX</h1>
+            <p class="tagline">Creando experiencias visuales únicas</p>
+            <p>Soy diseñador gráfico y especialista en UI/UX con enfoque en mejorar experiencias de usuario en plataformas digitales. Combino creatividad con metodología para crear interfaces intuitivas y atractivas.</p>
             <a href="#portfolio" class="cta-button">Ver mi trabajo</a>
         </div>
         <div class="hero-image">🎨</div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="portfolio-container">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🎯</div>
-                    <div class="project-content">
-                        <p class="project-category">Diseño Gráfico</p>
-                        <h3 class="project-title">Identidad Visual</h3>
-                        <p class="project-description">Desarrollo de marca completa incluyendo logo, paleta de colores y guías de estilo.</p>
-                    </div>
+    <section id="portfolio">
+        <h2 class="portfolio-title">Proyectos Destacados</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">🎯</div>
+                <div class="portfolio-content">
+                    <h3>Diseño Gráfico</h3>
+                    <p>Diseño de interfaces digitales y experiencias visuales impactantes en múltiples plataformas.</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">✨</div>
-                    <div class="project-content">
-                        <p class="project-category">Ilustración</p>
-                        <h3 class="project-title">Ilustraciones Digitales</h3>
-                        <p class="project-description">Ilustraciones personalizadas para diferentes proyectos y campañas.</p>
-                    </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">✨</div>
+                <div class="portfolio-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces modernas y funcionales pensadas en la experiencia del usuario.</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">📱</div>
-                    <div class="project-content">
-                        <p class="project-category">Diseño Digital</p>
-                        <h3 class="project-title">Diseño de Interfaz</h3>
-                        <p class="project-description">Interfaces modernas y funcionales pensadas en la experiencia del usuario.</p>
-                    </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">📱</div>
+                <div class="portfolio-content">
+                    <h3>Diseño Digital</h3>
+                    <p>Diseño responsivo para web y aplicaciones móviles con enfoque en usabilidad.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-image">👩‍🎨</div>
-        <div class="about-content">
-            <h2>¡Hola! Soy Antonia</h2>
-            <p>Estudiante de diseño gráfico e ilustración con pasión por crear experiencias visuales impactantes. Mi objetivo es constantemente innovar y explorar nuevas formas de comunicación visual.</p>
-            <p>Cuento con habilidades en diseño digital, ilustración, branding y dirección de arte. Estoy siempre abierta a nuevos retos y colaboraciones creativas.</p>
-            <div class="skills">
-                <span class="skill-tag">Diseño Gráfico</span>
-                <span class="skill-tag">Ilustración</span>
-                <span class="skill-tag">Branding</span>
-                <span class="skill-tag">UI/UX Design</span>
-                <span class="skill-tag">Adobe Creative Suite</span>
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">👨‍🎨</div>
+            <div class="about-content">
+                <h2>¡Hola! Soy Juan Diego</h2>
+                <p>Diseñador gráfico y especialista en UI/UX con pasión por crear experiencias visuales impactantes. Con experiencia en diseño de interfaces digitales, multimedia y realidad aumentada, me dedico a transformar ideas en soluciones visuales efectivas.</p>
+                <p>Cuento con habilidades en diseño gráfico, UI/UX, branding, gestión de proyectos y liderazgo. Estoy siempre buscando nuevas formas de innovar en el diseño digital.</p>
+                <div class="skills">
+                    <div class="skill-item">Diseño Gráfico</div>
+                    <div class="skill-item">UI/UX Design</div>
+                    <div class="skill-item">Interfaces Digitales</div>
+                    <div class="skill-item">Multimedia</div>
+                    <div class="skill-item">Branding</div>
+                    <div class="skill-item">Gestión de Proyectos</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2>Trabajemos Juntos</h2>
-            <p>¿Tienes un proyecto en mente? Me gustaría escuchar sobre él.</p>
-            <div class="contact-links">
-                <a href="mailto:contacto@ejemplo.com">Email</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Behance</a>
-            </div>
+    <section id="contact">
+        <h2 class="contact-title">Trabajemos Juntos</h2>
+        <p class="contact-subtitle">¿Tienes un proyecto en mente? Me gustaría escuchar sobre él.</p>
+        <div class="contact-links">
+            <a href="mailto:juandiegotrillos@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/juandiegotrillos" target="_blank">LinkedIn</a>
+            <a href="#">Portafolio</a>
+            <a href="tel:3161732616">Teléfono</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Antonia Aravena. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Juan Diego Trillos. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
