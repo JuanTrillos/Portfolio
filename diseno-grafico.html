@@ -123,6 +123,7 @@
       max-width: 90%;
       max-height: 90vh;
       display: flex;
+					flex-direction: column;
       align-items: center;
       justify-content: center;
     }
@@ -267,13 +268,14 @@
     <div class="modal-content" onclick="event.stopPropagation()">
       <span class="close-modal" onclick="closeModal()">&times;</span>
       <img id="modalImage" class="modal-image" src="" alt="">
-    </div>
-    			<div class="zoom-slider-container">
+		    			<div class="zoom-slider-container">
 				<span class="zoom-label">Zoom:</span>
 				<input type="range" id="zoomSlider" class="zoom-slider" min="50" max="200" value="100">
 				<span class="zoom-value" id="zoomValue">100</span>
 				<span class="zoom-label">%</span>
 			</div>
+
+    </div>
   </div>
 
   <footer>
