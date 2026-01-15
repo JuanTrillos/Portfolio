@@ -379,5 +379,13 @@
     <footer>
         <p>&copy; 2026 Juan Diego Trillos. Todos los derechos reservados.</p>
     </footer>
-</body>
+
+<script>
+ document.querySelectorAll('.portfolio-grid .portfolio-card').forEach((card, index) => {
+   if (index === 0) { // First card is Diseño Gráfico
+     card.style.cursor = 'pointer';
+     card.onclick = () => window.location.href = 'diseno-grafico.html';
+   }
+ });
+</script></body>
 </html>
